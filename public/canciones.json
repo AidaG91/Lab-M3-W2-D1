@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "titulo": "Tage wie diese",
+        "artista": "Die Toten Hosen",
+        "album": "Ballast der Republik",
+        "imagenAlbum": "https://www.emp-online.es/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dw18b2a055/images/2/3/2/5/232560.jpg?sw=1000&sh=800&sm=fit&sfrm=png",
+        "duracion": 4,
+        "valoracion": 4
+    },
+    {
+        "id": 2,
+        "titulo": "Iris",
+        "artista": "The Goo Goo Dolls",
+        "album": "Dizzy up the Girl",
+        "imagenAlbum": "https://e.snmc.io/i/1200/s/fe7b21dd686710d9dec24f27fd15f855/4418818",
+        "duracion": 4,
+        "valoracion": 5
+    },
+    {
+        "id": 3,
+        "titulo": "Somewhere I Belong",
+        "artista": "Linkin Park",
+        "album": "Meteora",
+        "imagenAlbum": "https://m.media-amazon.com/images/I/71-nhMkC-vL._UF1000,1000_QL80_.jpg",
+        "duracion": 3,
+        "valoracion": 5
+    },
+    {
+        "id": 4,
+        "titulo": "Teeth",
+        "artista": "5 Seconds of Summer",
+        "album": "Teeth",
+        "imagenAlbum": "https://upload.wikimedia.org/wikipedia/en/d/da/5_Seconds_of_Summer_-_Teeth.png",
+        "duracion": 3,
+        "valoracion": 5
+    },
+    {
+        "id": 5,
+        "titulo": "Primo Victoria",
+        "artista": "Sabaton",
+        "album": "Re-armed",
+        "imagenAlbum": "https://m.media-amazon.com/images/I/81brGL6nF0L._UF894,1000_QL80_.jpg",
+        "duracion": 4,
+        "valoracion": 5
+    },
+    {
+        "id": 6,
+        "titulo": "Knights of Cydonia",
+        "artista": "Muse",
+        "album": "Black Holes and Revelations",
+        "imagenAlbum": "https://m.media-amazon.com/images/I/81eIMvbLnfL._UF1000,1000_QL80_.jpg",
+        "duracion": 6,
+        "valoracion": 5
+    },
+    {
+        "id": 7,
+        "titulo": "Through the Fire and Flames",
+        "artista": "DragonForce",
+        "album": "Inhuman Rampage",
+        "imagenAlbum": "https://m.media-amazon.com/images/I/81JKCNvcd0L._UF1000,1000_QL80_.jpg",
+        "duracion": 7,
+        "valoracion": 5
+    },
+    {
+        "id": 8,
+        "titulo": "The Pretender",
+        "artista": "Foo Fighters",
+        "album": "Echoes, Silence, Patience & Grace",
+        "imagenAlbum": "https://m.media-amazon.com/images/I/71AU95oLsCL._UF1000,1000_QL80_.jpg",
+        "duracion": 4,
+        "valoracion": 4
+    },
+    {
+        "id": 9,
+        "titulo": "Numb",
+        "artista": "Linkin Park",
+        "album": "Meteora",
+        "imagenAlbum": "https://m.media-amazon.com/images/I/71-nhMkC-vL._UF1000,1000_QL80_.jpg",
+        "duracion": 3,
+        "valoracion": 5
+    }
+]
