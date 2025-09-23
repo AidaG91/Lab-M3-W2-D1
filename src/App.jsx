@@ -1,6 +1,6 @@
 import "./App.css";
-import Aficiones from "./components/Aficiones/Aficiones";
 import Canciones from "./components/Canciones/Canciones";
+import HobbyList from "./components/HobbyList/HobbyList";
 import Presentacion from "./components/Presentacion/Presentacion";
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
     <>
       <Presentacion />
       <Canciones />
-      <Aficiones />
+      <HobbyList />
     </>
   );
 }

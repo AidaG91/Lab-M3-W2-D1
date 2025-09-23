@@ -18,10 +18,10 @@ export default function Presentacion() {
       <div>
         <h3 className={styles.titulo_aficiones}>Mis Aficiones</h3>
         <ul className={styles.aficiones_list}>
-          <li><a href="#bjj">BJJ</a></li>
-          <li><a href="#literatura">Literatura fantástica</a></li>
-          <li><a href="#series">Series</a></li>
-          <li><a href="#videojuegos">Videojuegos</a></li>
+          <li><a className={styles.link} href="#bjj">BJJ</a></li>
+          <li><a className={styles.link} href="#literatura">Literatura fantástica</a></li>
+          <li><a className={styles.link} href="#series">Series</a></li>
+          <li><a className={styles.link} href="#videojuegos">Videojuegos</a></li>
         </ul>
       </div>
     </>
