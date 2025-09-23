@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Canciones.module.css";
 
 export default function Canciones() {
@@ -23,14 +23,15 @@ export default function Canciones() {
     load();
   }, []);
 
-  if (state.loading) return <p>Cargando canciones...</p>;
-  if (state.error) return <p>Error: {state.error}</p>;
-  if (!canciones.length) return <p>No hay canciones que mostrar.</p>;
+  if (state.loading) return <p className={styles.status}>Cargando canciones...</p>;
+  if (state.error) return <p className={styles.statusError}>Error: {state.error}</p>;
+  if (!canciones.length) return <p className={styles.status}>No hay canciones que mostrar.</p>;
 
   return (
     <section className={styles.list}>
       <header className={styles.header}>
         <h2>Canciones</h2>
+        <p>Mis canciones favoritas</p>
         <span className={styles.count}>{canciones.length}</span>
       </header>
 

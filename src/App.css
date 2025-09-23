@@ -9,17 +9,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.my-pic {
-  width: 200px;
-  border-radius: 100px;
-  margin: 10px;
-  transition: transform 0.3s ease;
-}
-
-.my-pic:hover {
-  transform: scale(1.05);
-}
-
 .App {
   text-align: center;
   font-family: sans-serif;

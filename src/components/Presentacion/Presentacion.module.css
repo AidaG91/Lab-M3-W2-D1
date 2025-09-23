@@ -1,0 +1,26 @@
+.my-pic {
+  width: 200px;
+  border-radius: 100px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.my-pic:hover {
+  transform: scale(1.05);
+}
+
+.aficiones_list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.titulo_aficiones {
+  /* text-align: left; */
+  font-size: 1rem; /* o prueba con 0.9rem si lo quieres aún más pequeño */
+  margin-left: 10px; /* opcional, para separarlo del borde */
+  color: #333; /* opcional, para darle un tono más suave */
+}
+
