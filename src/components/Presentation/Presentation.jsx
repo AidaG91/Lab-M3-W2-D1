@@ -1,4 +1,4 @@
-import styles from "./Presentacion.module.css";
+import styles from "./Presentation.module.css";
 import myPic from "../../assets/my_pic.png";
 
 export default function Presentacion() {

@@ -23,9 +23,12 @@ export default function Song() {
     load();
   }, []);
 
-  if (state.loading) return <p className={styles.status}>Cargando canciones...</p>;
-  if (state.error) return <p className={styles.statusError}>Error: {state.error}</p>;
-  if (!song.length) return <p className={styles.status}>No hay canciones que mostrar.</p>;
+  if (state.loading)
+    return <p className={styles.status}>Cargando canciones...</p>;
+  if (state.error)
+    return <p className={styles.statusError}>Error: {state.error}</p>;
+  if (!song.length)
+    return <p className={styles.status}>No hay canciones que mostrar.</p>;
 
   return (
     <section className={styles.list}>
@@ -36,13 +39,13 @@ export default function Song() {
       </header>
 
       <ul className={styles.grid}>
-        {song.map((c) => (
-          <li className={styles.card} key={c.id}>
+        {song.map((s) => (
+          <li className={styles.card} key={s.id}>
             <figure className={styles.figure}>
               <img
                 className={styles.imagenAlbum}
-                src={c.imagenAlbum}
-                alt={`Carátula de ${c.titulo}`}
+                src={s.imagenAlbum}
+                alt={`Carátula de ${s.titulo}`}
                 loading="lazy"
                 width="300"
                 height="300"
@@ -52,15 +55,13 @@ export default function Song() {
                 }}
               />
               <figcaption className={styles.caption}>
-                <h3 className={styles.title}>{c.titulo}</h3>
-                <h2 className={styles.artista}>{c.artista}</h2>
-                <p className={styles.meta}>
-                  <span className={styles.duracion}>{c.duracion}</span>
-                  <span className={styles.dot}>•</span>
-                  <span>{c.album}</span>
-                  <span className={styles.dot}>•</span>
-                  <span className={styles.valoracion}>★ {c.valoracion}</span>
-                </p>
+                <h3 className={styles.title}>{s.titulo}</h3>
+                <h2 className={styles.artista}>{s.artista}</h2>
+                <div className={styles.meta}>
+                  <span className={styles.duracion}>{s.duracion} min</span>
+                  <span className={styles.album}>{s.album}</span>
+                  <span className={styles.valoracion}>★ {s.valoracion}</span>
+                </div>
               </figcaption>
             </figure>
           </li>
