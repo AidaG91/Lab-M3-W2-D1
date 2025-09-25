@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./HobbyList.module.css";
-import HobbyInfo from "../HobbyInfo/HobbyInfo";
 
 export default function HobbyList() {
   const [hobbies, setHobbies] = useState([]);
@@ -45,7 +44,10 @@ export default function HobbyList() {
             key={hobby.id}
             style={{ backgroundImage: `url(${hobby.imagen})` }}
           >
-            <HobbyInfo hobby={hobby} />
+            <div className={styles.overlay}>
+              <h3>{hobby.titulo}</h3>
+              <p>{hobby.descripcion}</p>
+            </div>
           </li>
         ))}
       </ul>
