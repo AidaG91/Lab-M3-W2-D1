@@ -19,21 +19,3 @@ body {
   padding: 20px;
 }
 
-.canciones-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.cancion-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 200px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-.card {
-  padding: 2em;
-}
