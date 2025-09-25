@@ -4,6 +4,9 @@ import SongAnalytics from "../components/SongAnalytics/SongAnalytics";
 import Song from "../components/Song/Song";
 import HobbyList from "../components/HobbyList/HobbyList";
 import ContactForm from "../components/ContactForm/ContactForm";
+import ApiSongCRUD from "../components/ApiSongCrud/ApiSongCRUD";
+import ApiSong from "../components/ApiSong/ApiSong";
+
 
 function Layout() {
   return (
@@ -60,6 +63,27 @@ function Layout() {
           >
             Forms
           </NavLink>
+
+          <NavLink
+            to="/api"
+            style={({ isActive }) => ({
+              textDecoration: "none",
+              color: isActive ? "#f1a619" : "#111827",
+              fontWeight: isActive ? 700 : 500,
+            })}
+          >
+            Api
+          </NavLink>
+          <NavLink
+            to="/crud"
+            style={({ isActive }) => ({
+              textDecoration: "none",
+              color: isActive ? "#f1a619" : "#111827",
+              fontWeight: isActive ? 700 : 500,
+            })}
+          >
+            CRUD
+          </NavLink>
         </nav>
       </header>
       <main style={{ padding: 16 }}>
@@ -83,6 +107,9 @@ export default function AppRouter() {
         <Route path="/analytics" element={<SongAnalytics />} />
         <Route path="/aficiones" element={<HobbyList />} />
         <Route path="/form" element={<ContactForm />} />
+        <Route path="/api" element={<ApiSong />} />
+        <Route path="/crud" element={<ApiSongCRUD />} />
+
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
