@@ -18,9 +18,8 @@
 }
 
 .titulo_aficiones {
-  /* text-align: left; */
-  font-size: 1rem; /* o prueba con 0.9rem si lo quieres aún más pequeño */
-  margin-left: 10px; /* opcional, para separarlo del borde */
-  color: #333; /* opcional, para darle un tono más suave */
+  font-size: 1rem; 
+  margin-left: 10px; 
+  color: #333; 
 }
 

@@ -1,0 +1,91 @@
+.form {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1f2937;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+input,
+textarea,
+select {
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #111827;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="range"] {
+  accent-color: #f59e0b; /* amarillo estrella */
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+/* Botón principal: granate suave */
+.btnPrimary {
+  padding: 0.6rem 1rem;
+  background: #f1a619;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btnPrimary:hover {
+  background: #991b1b;
+}
+
+/* Botón secundario: gris claro */
+.btnSecondary {
+  padding: 0.6rem 1rem;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background: #e5e7eb;
+}

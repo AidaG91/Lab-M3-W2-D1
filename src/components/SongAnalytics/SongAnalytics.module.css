@@ -1,11 +1,9 @@
-/* Contenedor general */
 .wrapper {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-/* Cabecera y stats */
 .header {
   display: grid;
   gap: 0.5rem;
@@ -30,35 +28,31 @@
 .input,
 .select,
 .number {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans",
-    "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
   font-size: 0.95rem;
   line-height: 1.4;
   font-weight: 500;
-  color: #111827; /* Texto oscuro (alto contraste) */
-  background-color: #ffffff; /* Fondo claro */
-  border: 1px solid #cbd5e1; /* Slate-300 */
+  color: #111827;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
   border-radius: 0.55rem;
   padding: 0.55rem 0.7rem;
-  min-height: 2.6rem; /* Altura cómoda de clic */
+  min-height: 2.6rem;
   min-width: 10rem;
 }
 
 .input::placeholder {
-  color: #6b7280; /* Slate-500 */
-  opacity: 1; /* Evita placeholder demasiado tenue */
+  color: #6b7280;
+  opacity: 1;
 }
 
 .input:focus,
 .select:focus,
 .number:focus {
   outline: none;
-  border-color: #2563eb; /* Blue-600 */
+  border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-/* Label en línea y espaciado uniforme */
 .row {
   display: flex;
   align-items: center;
@@ -67,17 +61,14 @@
   font-size: 0.95rem;
 }
 
-/* Select: aspecto limpio (sin forzar caret personalizado) */
 .select {
   appearance: auto;
 }
 
-/* Number: deja visibles los spinners por accesibilidad */
 .number {
   appearance: auto;
 }
 
-/* GRID de tarjetas */
 .grid {
   list-style: none;
   margin: 0;
@@ -88,19 +79,20 @@
 }
 
 .card {
-  border: 1px solid #e5e7eb; /* Gray-200 */
+  border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-.poster {
+.imagenAlbum {
   width: 100%;
-  display: block;
-  background: #f3f4f6; /* Gray-100 */
-  aspect-ratio: 2 / 3;
+  height: 300px;
   object-fit: cover;
+  display: block;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .body {
@@ -108,7 +100,7 @@
   display: grid;
   gap: 0.35rem;
 }
-.title {
+.titulo {
   margin: 0;
   font-size: 1.05rem;
   color: #111827;
@@ -125,7 +117,6 @@
   line-height: 1.35;
 }
 
-/* Estados */
 .status {
   text-align: center;
   padding: 2rem;
@@ -137,16 +128,17 @@
   color: #b91c1c;
 }
 
-/* Bloques colapsables y tags */
 .details {
   margin-top: 1rem;
 }
+
 .tags {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   padding: 0.5rem 0;
 }
+
 .tag {
   background: #f3f4f6;
   border: 1px solid #e5e7eb;
