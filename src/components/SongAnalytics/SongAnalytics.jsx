@@ -8,11 +8,11 @@ export default function SongAnalytics() {
   const [error, setError] = useState(null);
 
   // Controles (para aplicar filter/sort)
-  const [query, setQuery] = useState(""); // filtro por título
-  const [artista, setArtista] = useState("ALL"); // filtro por artista
-  const [minValoracion, setMinValoracion] = useState(0); // filtro por nota mínima
-  const [sortBy, setSortBy] = useState("valoracion"); // ordenar por: rating | year | title
-  const [sortDir, setSortDir] = useState("desc"); // asc | desc
+  const [query, setQuery] = useState(""); 
+  const [artista, setArtista] = useState("ALL"); 
+  const [minValoracion, setMinValoracion] = useState(0);
+  const [sortBy, setSortBy] = useState("valoracion"); 
+  const [sortDir, setSortDir] = useState("desc");
 
   useEffect(() => {
     const load = async () => {
@@ -71,7 +71,7 @@ export default function SongAnalytics() {
     [songs]
   );
 
-  // Validaciones con some / every
+  // Validaciones 
   const hasLowRated = useMemo(
     () => songs.some((s) => (s.valoracion ?? 0) < 5),
     [songs]
@@ -79,7 +79,6 @@ export default function SongAnalytics() {
 
   // Filtro y orden
   const filteredSorted = useMemo(() => {
-    // filter: por título, artista y valoración mínima
     const f = songs
       .filter((s) =>
         s.titulo.toLowerCase().includes(query.trim().toLowerCase())
@@ -129,7 +128,6 @@ export default function SongAnalytics() {
         </div>
       </header>
 
-      {/* Controles para que se vea el efecto de filter/sort */}
       <div className={styles.controls}>
         <input
           className={styles.input}
@@ -185,7 +183,6 @@ export default function SongAnalytics() {
         </label>
       </div>
 
-      {/* Listado final (map) */}
       <ul className={styles.grid}>
         {filteredSorted.map((s) => (
           <SongCard key={s.id} song={s} />
