@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import styles from "./Canciones.module.css";
+import styles from "./Song.module.css";
 
-export default function Canciones() {
-  const [canciones, setCanciones] = useState([]);
+export default function Song() {
+  const [song, setSong] = useState([]);
   const [state, setState] = useState({ loading: true, error: null });
 
   useEffect(() => {
     const load = async () => {
       try {
-        const res = await fetch("/canciones.json", { cache: "no-store" });
+        const res = await fetch("/songs.json", { cache: "no-store" });
         if (!res.ok) throw new Error("Ha habido un error en la carga");
         const data = await res.json();
-        setCanciones(Array.isArray(data) ? data.slice(0, 10) : []);
+        setSong(Array.isArray(data) ? data.slice(0, 10) : []);
         setState({ loading: false, error: null });
       } catch (err) {
         setState({
@@ -25,18 +25,18 @@ export default function Canciones() {
 
   if (state.loading) return <p className={styles.status}>Cargando canciones...</p>;
   if (state.error) return <p className={styles.statusError}>Error: {state.error}</p>;
-  if (!canciones.length) return <p className={styles.status}>No hay canciones que mostrar.</p>;
+  if (!song.length) return <p className={styles.status}>No hay canciones que mostrar.</p>;
 
   return (
     <section className={styles.list}>
       <header className={styles.header}>
         <h2>Canciones</h2>
         <p>Mis canciones favoritas</p>
-        <span className={styles.count}>{canciones.length}</span>
+        <span className={styles.count}>{song.length}</span>
       </header>
 
       <ul className={styles.grid}>
-        {canciones.map((c) => (
+        {song.map((c) => (
           <li className={styles.card} key={c.id}>
             <figure className={styles.figure}>
               <img
