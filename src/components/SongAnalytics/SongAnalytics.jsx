@@ -34,7 +34,7 @@ export default function SongAnalytics() {
   // Lista por artistas
   const artistas = useMemo(() => {
     const set = songs.reduce((acc, s) => {
-      (s.artistas || []).forEach((a) => acc.add(a));
+      if (s.artista) acc.add(s.artista);
       return acc;
     }, new Set());
     return ["ALL", ...Array.from(set).sort()];
@@ -56,11 +56,9 @@ export default function SongAnalytics() {
       null
     );
 
-    // conteo por artista
     const byArtista = songs.reduce((acc, s) => {
-      (s.artistas || []).forEach((a) => {
-        acc[a] = (acc[a] || 0) + 1;
-      });
+      const a = s.artista;
+      acc[a] = (acc[a] || 0) + 1;
       return acc;
     }, {});
 
@@ -86,9 +84,7 @@ export default function SongAnalytics() {
       .filter((s) =>
         s.titulo.toLowerCase().includes(query.trim().toLowerCase())
       )
-      .filter((s) =>
-        artista === "ALL" ? true : (s.artistas || []).includes(artista)
-      )
+      .filter((s) => (artista === "ALL" ? true : s.artista === artista))
       .filter((s) => (s.valoracion ?? 0) >= Number(minValoracion));
 
     // sort: crea copia para no mutar array original
@@ -189,36 +185,12 @@ export default function SongAnalytics() {
         </label>
       </div>
 
-      {/* Conteo por artista (reduce → objeto) */}
-      <details className={styles.details}>
-        <summary>Conteo por artista (reduce)</summary>
-        <ul className={styles.tags}>
-          {Object.entries(stats.byArtista).map(([a, n]) => (
-            <li key={a} className={styles.tag}>
-              {a}: {n}
-            </li>
-          ))}
-        </ul>
-      </details>
-
       {/* Listado final (map) */}
       <ul className={styles.grid}>
         {filteredSorted.map((s) => (
           <SongCard key={s.id} song={s} />
         ))}
       </ul>
-
-      {/* Ejemplo visible de map para principiantes (sólo títulos) */}
-      <details className={styles.details}>
-        <summary>Sólo títulos (map)</summary>
-        <pre className={styles.code}>
-          {JSON.stringify(
-            filteredSorted.map((s) => s.titulo),
-            null,
-            2
-          )}
-        </pre>
-      </details>
     </section>
   );
 }
